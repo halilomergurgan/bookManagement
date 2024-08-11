@@ -9,10 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
@@ -67,7 +64,6 @@ public class BookController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-
     @DeleteMapping("/{id}")
     public ResponseEntity<CustomResponse<Void>> deleteBook(@PathVariable Long id) {
         Book book = bookRepository.findById(id).orElseThrow(() -> new RuntimeException("Book not found"));
@@ -76,7 +72,6 @@ public class BookController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-
 
     public static class CustomResponse<T> {
         private T data;
