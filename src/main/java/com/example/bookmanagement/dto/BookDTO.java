@@ -3,10 +3,12 @@ package com.example.bookmanagement.dto;
 public class BookDTO {
     private String title;
     private String author;
+    private Long categoryId;
 
-    public BookDTO(String title, String author) {
+    public BookDTO(String title, String author, Long categoryId) {
         this.title = title;
         this.author = author;
+        this.categoryId = categoryId;
     }
 
     public String getTitle() {
@@ -22,5 +24,13 @@ public class BookDTO {
     }
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 }
