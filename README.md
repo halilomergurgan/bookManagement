@@ -22,7 +22,7 @@ This is a RESTful API built using Java Spring Boot. The API allows users to mana
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/halilomergurgan/bookManagement.git
+git clone https://github.com/halilomergurgan/java-bookManagement.git
 cd bookManagement
 ```
 
