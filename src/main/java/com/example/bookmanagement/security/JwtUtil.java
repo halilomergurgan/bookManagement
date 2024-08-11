@@ -2,6 +2,7 @@ package com.example.bookmanagement.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -53,6 +54,7 @@ public class JwtUtil {
                 .setSubject(subject)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // 10 hours
+                .signWith(secretKey, SignatureAlgorithm.HS256)  // Burada secretKey ve HS256 ile imzalanıyor
                 .compact();
     }
 

@@ -94,8 +94,8 @@ bookManagement/
 
 ```
 
-Contributing
+## Contributing
 If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome.
 
-License
+## License
 This project is licensed under the MIT License.
